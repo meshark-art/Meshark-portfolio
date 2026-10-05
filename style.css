@@ -1,400 +1,216 @@
-/* ================================
-   MESHARK WAEMA PORTFOLIO
-   Dark Green + Gold Theme
-================================ */
+/* =========================================
+   ABOUT PAGE
+========================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #071a14;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-/* ================================
-   NAVIGATION
-================================ */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 22px 6%;
+.page-hero {
+    min-height: 78vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(5, 20, 15, 0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(201, 164, 92, 0.15);
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #d1ae68;
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-}
-
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #d1ae68;
-}
-
-/* ================================
-   HERO
-================================ */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
-    padding: 120px 8% 80px;
+    padding: 150px 8% 90px;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
 
+.about-hero {
     background:
         linear-gradient(
-            rgba(4, 22, 16, 0.88),
-            rgba(4, 22, 16, 0.94)
+            90deg,
+            rgba(4, 20, 15, 0.94) 0%,
+            rgba(4, 20, 15, 0.72) 42%,
+            rgba(4, 20, 15, 0.30) 100%
         ),
-        url("images/home-bg.jpg");
+        url("images/about-bg.jpg");
 
     background-size: cover;
     background-position: center;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(
-            circle at 75% 50%,
-            rgba(209, 174, 104, 0.10),
-            transparent 35%
-        );
-    pointer-events: none;
-}
-
-.hero-content {
+.page-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    max-width: 850px;
 }
 
-.eyebrow {
-    color: #d1ae68;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    font-size: clamp(55px, 8vw, 105px);
-    line-height: 0.95;
-    font-weight: 700;
+.page-hero h1 {
+    font-size: clamp(52px, 7vw, 95px);
+    line-height: 0.98;
     letter-spacing: -3px;
-    margin-bottom: 25px;
+    margin: 15px 0 25px;
 }
 
-.hero h2 {
-    font-size: clamp(22px, 3vw, 36px);
-    font-weight: 400;
+.page-hero p {
     color: #d1ae68;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   ABOUT INTRODUCTION
+========================================= */
+
+.about-introduction {
+    background: #071a14;
+    padding: 110px 8%;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 90px;
+    margin-top: 60px;
+}
+
+.about-text p {
+    color: #b7c1bc;
+    font-size: 17px;
+    line-height: 1.9;
     margin-bottom: 25px;
+    max-width: 780px;
 }
 
-.hero p {
-    max-width: 720px;
-    font-size: 18px;
-    color: #c5cec9;
-    margin-bottom: 35px;
+.about-highlight {
+    border-top: 1px solid rgba(209, 174, 104, 0.5);
+    padding-top: 25px;
 }
 
-/* ================================
-   BUTTONS
-================================ */
-
-.btn-group {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
+.about-highlight span {
+    color: #d1ae68;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 14px 30px;
-    border: 1px solid #d1ae68;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
+.about-highlight h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 18px 0;
+}
+
+.about-highlight p {
+    color: #9eaaa4;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INTERESTS
+========================================= */
+
+.about-interests {
+    padding: 110px 8%;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-top: 60px;
+    background: rgba(209, 174, 104, 0.15);
+}
+
+.interest-item {
+    background: #05140f;
+    padding: 45px;
+    min-height: 260px;
     transition: 0.3s ease;
 }
 
-.btn-primary {
-    background: #d1ae68;
-    color: #071a14;
+.interest-item:hover {
+    background: #0b2119;
 }
 
-.btn-primary:hover {
-    background: transparent;
-    color: #d1ae68;
-}
-
-.btn-outline {
-    color: #ffffff;
-}
-
-.btn-outline:hover {
-    background: #d1ae68;
-    color: #071a14;
-}
-
-/* ================================
-   GENERAL SECTIONS
-================================ */
-
-section {
-    padding: 100px 8%;
-}
-
-.section-dark {
-    background: #071a14;
-}
-
-.section-deep {
-    background: #05140f;
-}
-
-.section-title {
-    margin-bottom: 55px;
-}
-
-.section-title span {
-    display: block;
-    color: #d1ae68;
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.section-title h2 {
-    font-size: clamp(35px, 5vw, 60px);
-    line-height: 1.1;
-    font-weight: 600;
-}
-
-.section-title p {
-    max-width: 700px;
-    margin-top: 20px;
-    color: #aebbb5;
-}
-
-/* ================================
-   INTRO
-================================ */
-
-.intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
-}
-
-.intro-text p {
-    color: #b7c1bc;
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-
-.intro-highlight {
-    border-left: 2px solid #d1ae68;
-    padding-left: 30px;
-}
-
-.intro-highlight h3 {
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.intro-highlight p {
-    color: #aebbb5;
-}
-
-/* ================================
-   CARDS
-================================ */
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.card {
-    min-height: 250px;
-    padding: 32px 26px;
-    background: rgba(255, 255, 255, 0.035);
-    border: 1px solid rgba(209, 174, 104, 0.15);
-    transition: 0.35s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(209, 174, 104, 0.6);
-    background: rgba(209, 174, 104, 0.06);
-}
-
-.card-number {
+.interest-item > span {
     color: #d1ae68;
     font-size: 13px;
     letter-spacing: 2px;
-    margin-bottom: 45px;
 }
 
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+.interest-item h3 {
+    font-size: 27px;
     font-weight: 500;
+    margin: 45px 0 15px;
 }
 
-.card p {
+.interest-item p {
     color: #9eaaa4;
-    font-size: 15px;
+    max-width: 450px;
 }
 
-/* ================================
-   CTA
-================================ */
 
-.cta {
-    text-align: center;
+/* =========================================
+   EDUCATION
+========================================= */
+
+.education-section {
+    padding: 110px 8%;
+    background: #071a14;
+}
+
+.education-card {
+    margin-top: 55px;
+    padding: 50px;
+    max-width: 1000px;
+    border: 1px solid rgba(209, 174, 104, 0.2);
     background:
         linear-gradient(
-            rgba(5, 20, 15, 0.94),
-            rgba(5, 20, 15, 0.94)
-        ),
-        url("images/home-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
+            135deg,
+            rgba(209, 174, 104, 0.06),
+            rgba(255, 255, 255, 0.015)
+        );
 }
 
-.cta h2 {
-    font-size: clamp(38px, 5vw, 65px);
-    margin-bottom: 20px;
-}
-
-.cta p {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    color: #aebbb5;
-}
-
-/* ================================
-   FOOTER
-================================ */
-
-footer {
-    padding: 35px 8%;
-    background: #030d09;
-    border-top: 1px solid rgba(209, 174, 104, 0.12);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer p {
-    color: #7f8b85;
-    font-size: 13px;
-}
-
-.footer-name {
+.education-label {
     color: #d1ae68;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 900px) {
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .intro {
-        grid-template-columns: 1fr;
-    }
+.education-card h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 0 10px;
 }
 
-@media (max-width: 650px) {
+.education-card > p {
+    color: #c3ccc7;
+    font-size: 17px;
+}
 
-    .navbar {
-        padding: 18px 5%;
+.education-description {
+    margin-top: 25px;
+    max-width: 700px;
+    color: #929f99 !important;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   ABOUT PAGE RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .page-hero {
+        min-height: 70vh;
+        padding: 130px 7% 70px;
     }
 
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding: 120px 7% 70px;
-    }
-
-    .hero h1 {
+    .page-hero h1 {
         letter-spacing: -2px;
     }
 
-    section {
-        padding: 75px 7%;
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
     }
 
-    .card-grid {
+    .interest-grid {
         grid-template-columns: 1fr;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+    .education-card {
+        padding: 35px 25px;
     }
 }
