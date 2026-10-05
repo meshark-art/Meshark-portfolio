@@ -92,13 +92,21 @@ header {
     align-items: center;
     justify-content: center;
 
+    position: relative;
+    overflow: hidden;
+
     background:
-        radial-gradient(
-            circle at top right,
-            #dbeafe,
-            transparent 40%
+        linear-gradient(
+            rgba(3, 38, 34, 0.94),
+            rgba(3, 38, 34, 0.94)
         ),
-        #f7f8fc;
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
 }
 
 .hero-text {
